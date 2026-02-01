@@ -1,0 +1,90 @@
+/* Base */
+.geiss-ts{
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.geiss-ts.style-1{ text-align:left; }
+.geiss-ts.style-2{ text-align:center; }
+
+/* Viewport */
+.geiss-ts__viewport{
+  position: relative;
+  overflow: hidden;
+  padding-top: 56px; /* space for nav */
+  touch-action: pan-y; /* allow vertical scroll on mobile */
+}
+
+/* Track */
+.geiss-ts__track{
+  display: flex;
+  width: 100%;
+  transform: translateX(0);
+  transition: transform var(--geiss-speed, 700ms) ease;
+  will-change: transform;
+}
+
+/* Slide */
+.geiss-ts__slide{
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+/* Text styling (defaults, Elementor overrides via controls) */
+.geiss-ts__title{
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 12px;
+}
+
+.geiss-ts__desc{
+  font-size: 32px;
+  line-height: 1.35;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.geiss-ts__name{
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.geiss-ts__company{
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+/* NAV (top-left) */
+.geiss-ts__nav-wrap{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.geiss-ts__nav{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  font-size: 20px;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;
+}
+
+/* Mobile */
+@media (max-width: 767px){
+  .geiss-ts__viewport{ padding-top: 54px; }
+}
