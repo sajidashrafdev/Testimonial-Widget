@@ -1,2 +1,2 @@
 # Testimonial-Widget
-Testimonial Widget for elementor
+Custom testimonial/quote slider widget with style controls and top-left navigation.
